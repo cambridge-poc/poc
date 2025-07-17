@@ -1,8 +1,6 @@
-defaultStorageMapping: WORK
+defaultStorageMapping: SILVER
 fileVersion: 1
 locations:
   - BRONZE
   - GOLD
-  - SAMPLE
   - SILVER
-  - WORK

@@ -1,0 +1,53 @@
+fileVersion: 1
+id: ad122e0a-f9ef-41a7-9bc9-6fc66d799f5d
+name: STG_TEST
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7012188e-1e89-468e-8cb7-42081ee609ac
+          stepCounter: ad122e0a-f9ef-41a7-9bc9-6fc66d799f5d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: I
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09093eb6-db08-4577-8f32-7305d6379659
+                stepCounter: a92ea488-da79-467a-9fbb-43f96f8da931
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: TEST
+        join:
+          joinCondition: FROM {{ ref('BRONZE', 'TEST') }} "TEST"
+        name: STG_TEST
+        noLinkRefs: []
+  name: STG_TEST
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
